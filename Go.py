@@ -7,7 +7,11 @@ import config
 class MyClient(discord.Client):
 	async def on_ready(self):
 		print('Бот подключился - {0}!'.format(self.user))
-
+		
+	async def on_member_join(self, member):
+    		role = discord.utils.get(member.guild.roles, id=707936779939872770)
+       		await member.add_roles(role)
+	
 	async def on_raw_reaction_add(self, payload):
 		if payload.message_id == config.POST_ID:
 			channel = self.get_channel(payload.channel_id) # получаем объект канала
