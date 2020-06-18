@@ -15,4 +15,4 @@ ROLES = {
 
 EXCROLES = () #eskluchenie
 
-MAX_ROLES_PER_USER = 1 #collichestvo
+MAX_ROLES_PER_USER = 2 #collichestvo
